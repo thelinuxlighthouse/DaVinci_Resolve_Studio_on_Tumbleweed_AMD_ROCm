@@ -17,6 +17,7 @@ distrobox-enter davinci
 
 ## 4- (Optional) quick checks inside the container:
 cat /etc/os-release
+
 clinfo | egrep -m6 "Platform Name|Device Name|Version"
 
 You should see the AMD OpenCL platform and your GPU.
