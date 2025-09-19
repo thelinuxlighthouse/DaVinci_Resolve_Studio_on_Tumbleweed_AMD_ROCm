@@ -23,7 +23,9 @@ You should see the AMD OpenCL platform and your GPU.
 
 ## 5- Install DaVinci Resolve Studio into your shared HOME (inside the container):
 cd "$HOME"
+
 chmod +x DaVinci_Resolve_Studio_20.2_Linux.run
+
 ./DaVinci_Resolve_Studio_20.2_Linux.run -n -C "$HOME/resolve"
 
 ## 6- Add a KDE launcher on the host (so it feels native):
