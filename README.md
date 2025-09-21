@@ -4,14 +4,14 @@ Here’s a clean, self-contained Containerfile (Dockerfile syntax) you can build
 
 # Prerequisites on the host (Tumbleweed)
 ### Goal: Ensure your user can access the GPU devices /dev/dri and /dev/kfd and that containers can see them.
-#### 1.	Add your user to video/render (host side).
+## 1.	Add your user to video/render (host side).
 sudo usermod -aG video,render "$USER"
 
 ##### log out and back in (or reboot) so the new group memberships apply
 
 ##### Why: Those groups govern access to GPU device nodes that we will pass into the container. 
 
-#### 2.	Install Distrobox + Podman (host side).
+## 2.	Install Distrobox + Podman (host side).
 sudo zypper install --recommends distrobox podman
 
 ##### Why: Distrobox is a thin layer over Podman that gives you desktop-friendly containers (HOME sharing, X11/Wayland, audio, USB) without custom Dockerfiles.
